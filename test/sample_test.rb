@@ -1,4 +1,4 @@
-# sample/test/sample_test.rb
+# ./test/sample_test.rb
 
 require './sample_test_helper.rb'
 

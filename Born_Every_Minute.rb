@@ -1,7 +1,6 @@
-# sample/sample_app.rb
+# ./Born_Every_Minute.rb
 require 'sinatra'
 require 'pry'
-
 
 # We us "classic" mode where you don't actually see the class
 # inheriting from Sinatra::Base and you don't start the app with
@@ -9,10 +8,23 @@ require 'pry'
 # Sinatra do more of the behind-the-scenes
 
 get '/' do
-  # "Hello, World!"
+  "Hello, World!"
 end
 
 post '/' do
-  # "Caught a post" 
+  "Caught a post" 
 end
 
+# get '/' do
+#   erb :home
+# end
+
+# get '/thanks' do
+#   erb :thanks
+# end
+
+# get '/suckers' do
+#   erb :suckers
+# end
+
+__END__
