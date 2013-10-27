@@ -10,15 +10,24 @@ class MyTest < MiniTest::Unit::TestCase
     Sinatra::Application
   end
 
-  def test_hello_world
-    get '/'
-    assert last_response.ok?
-    assert_equal "Hello, World!", last_response.body
+  def test_hash
+    assert_equal Hash, suckers.class
   end
 
-  def test_post
-    post '/'
-    assert last_response.ok?
-    assert_equal "Caught a post", last_response.body
-  end
+
 end
+
+#Old Tests
+
+
+  # def test_hello_world
+  #   get '/'
+  #   assert last_response.ok?
+  #   assert_equal "Hello, World!", last_response.body
+  # end
+
+  # def test_post
+  #   post '/'
+  #   assert last_response.ok?
+  #   assert_equal "Caught a post", last_response.body
+  # end

@@ -16,6 +16,8 @@ require 'pry'
 #   "Caught a post" 
 # end
 
+require './userrecords.rb'
+
 get '/' do
   erb :home
 end
@@ -24,22 +26,19 @@ get '/thanks' do
   erb :thanks
 end
 
-
 post '/' do
-  erb :thanks, :locals => {:username => params[:username]}
-  # @username = params[:username]
-  # @email = params[:email]
-  # @twitter = params[:twitter]
+  @username = params[:username].to_s
+  @email = params[:email].to_s
+  @twitter = params[:twitter].to_s
+  @@user = User.new
+  @@user.append_to_hash(@username, @email, @twitter)
+  erb :thanks, :locals => {@username => params[:username]}
 end
 
 get '/suckers' do
-  erb :suckers
+  test = @@user.get_users
+  erb :suckers, :locals => {test => @@user.get_users}
 end
 
-# helpers do
-#   def img(name)
-#     "<img src='images/#{name}' alt='#{name}' />"
-#   end
-# end
 
 __END__
