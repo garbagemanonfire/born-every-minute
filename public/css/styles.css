@@ -101,8 +101,9 @@ td, th {
 }
 
 #inputs{ 
+    float: left;
     overflow: hidden; 
-    margin-right: 50%;
+    width: 45%;
 }
 
 #footer {
@@ -125,7 +126,8 @@ td, th {
     margin-right: auto ;
 }
 
-.submit {
+#submit {
     float: right;
     width: 45%;
+    vertical-align:top;
 }
