@@ -101,9 +101,11 @@ td, th {
 }
 
 #inputs{ 
+    float: left;
     overflow: hidden; 
     width: 45% ;
     float: left;
+
 }
 
 #footer {
