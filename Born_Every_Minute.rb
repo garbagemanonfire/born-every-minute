@@ -24,6 +24,14 @@ get '/thanks' do
   erb :thanks
 end
 
+
+post '/' do
+  erb :thanks, :locals => {:username => params[:username]}
+  # @username = params[:username]
+  # @email = params[:email]
+  # @twitter = params[:twitter]
+end
+
 get '/suckers' do
   erb :suckers
 end
