@@ -1,0 +1,131 @@
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color:#36454F;
+    background: #EBFCC8;
+    margin-left: 20px ;
+    margin-right: 20px ;
+}
+
+a {
+    color: #4fb69f;
+    text-decoration: none;
+}
+
+fieldset { 
+    border:0px ;
+    width: 90%;
+    margin-left: 10px ;
+    margin-right: 10px ;
+}
+
+form {
+    background-color:#BBF24D;
+    margin-top: 20px;
+    margin-left: 10px ;
+    margin-right: 10px ;
+}
+
+form input {
+    width: 100%;
+}
+form span {
+    display: block;
+    padding: 0 5px 0 0;
+}
+
+h1 {
+    font-size: 1.750em;
+    font-weight: 100;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 1.500em;
+    color: #b4c34f;
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+
+  color: #36454F; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+#btn {
+    border: 0px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    color: #36454F;
+    background: #4fb69f;
+    text-transform: uppercase;
+}
+
+#container {
+    width: auto ;
+    margin-left: 10px ;
+    margin-right: 10px ;
+    padding-bottom: 30px;
+}
+
+#copyright {
+    border-top: 8px;
+    padding: 10px 0;
+    margin: 15px 0;
+    text-align: center;
+    width: 100% ;
+    margin-left: auto ;
+    margin-right: auto;
+    position:fixed;
+    bottom:0px;
+}
+
+#header {
+    width: auto ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+#inputs{ 
+    overflow: hidden; 
+    margin-right: 50%;
+}
+
+#footer {
+
+}
+
+#intro {
+    margin-right: 33%;
+}
+
+#logo {
+    float: right ;
+    width: 33% ;
+    padding-right: 5px ;
+}
+
+#forsubmit {
+    width: auto ;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.submit {
+    float: right;
+    width: 45%;
+}
