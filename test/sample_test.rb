@@ -10,8 +10,28 @@ class MyTest < MiniTest::Unit::TestCase
     Sinatra::Application
   end
 
-  def test_hash
-    assert_equal Hash, suckers.class
+  # def test_hash
+  #   assert_equal Hash, suckers.class
+  # end
+
+  def test_thanks_page_exists
+    get '/'
+    assert last_response.ok?
+  end
+
+  def test_thanks_page_exists
+    get '/thanks'
+    assert last_response.ok?
+  end
+
+  def test_suckers_page_exists
+    get '/suckers'
+    assert last_response.ok?
+  end
+
+  def test_thanks_page_exists
+    get '/details'
+    assert last_response.ok?
   end
 
 
