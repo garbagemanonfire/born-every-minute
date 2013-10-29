@@ -1,22 +1,8 @@
 # ./Born_Every_Minute.rb
 require 'sinatra'
 require 'pry'
-require './userrecords.rb'
+#require './userrecords.rb'
 enable :sessions
-# require 'sinatra/static_assets'
-
-# We us "classic" mode where you don't actually see the class
-# inheriting from Sinatra::Base and you don't start the app with
-# rackup. This makes the object structure less obvious but lets
-# Sinatra do more of the behind-the-scenes
-
-# get '/' do
-#   "Hello, World!"
-# end
-
-# post '/' do
-#   "Caught a post" 
-# end
 
 get '/' do
   erb :home
@@ -44,6 +30,11 @@ end
 
 get '/details' do
   erb :details
+end
+
+post '/clear' do
+  session.clear
+  redirect '/'
 end
 
 

@@ -5,6 +5,7 @@ body {
     background: #EBFCC8;
     margin-left: 20px ;
     margin-right: 20px ;
+    max-width: 720px ;
 }
 
 a {
@@ -68,11 +69,10 @@ td, th {
 
 #btn {
     border: 0px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     margin: 5px 0;
     color: #36454F;
     background: #4fb69f;
-    text-transform: uppercase;
 }
 
 #container {
@@ -131,5 +131,4 @@ td, th {
 #submit {
     float: right;
     width: 45%;
-    vertical-align: top;
 }

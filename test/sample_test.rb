@@ -14,7 +14,7 @@ class MyTest < MiniTest::Unit::TestCase
   #   assert_equal Hash, suckers.class
   # end
 
-  def test_thanks_page_exists
+  def test_home_page_exists
     get '/'
     assert last_response.ok?
   end
@@ -29,7 +29,7 @@ class MyTest < MiniTest::Unit::TestCase
     assert last_response.ok?
   end
 
-  def test_thanks_page_exists
+  def test_details_page_exists
     get '/details'
     assert last_response.ok?
   end

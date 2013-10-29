@@ -2,14 +2,13 @@
 <div id="container">
     <div id="intro" >
         <h2>Suckers! Page</h2>
-        <p><a href='/suckers'>Return to listing</a><p>
+        <p><u><a href='/suckers'>Return to listing</a></u><p>
         <table border="1">
             <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Twitter</th>
             </tr>
-          <tr onclick="location.href='/details'">
             <td><%= session[:value][0][:username] %></td>
             <td><%= session[:value][1][:email] %></td>
             <td><%= session[:value][2][:twitter] %></td>
