@@ -13,14 +13,17 @@ get '/thanks' do
 end
 
 post '/' do
-  @username = params[:username]
-  @email = params[:email]
-  @twitter = params[:twitter]
-  session[:value] = [{ username: @username },{ email: @email },{ twitter: @twitter }]
+  if session.has_key?(:users)
+    session[:users] << { username: params["username"],
+                         email: params["email"],
+                         twitter: params["twitter"] }
+  else
+    session[:users] = []
+    session[:users] << { username: params["username"],
+                         email: params["email"],
+                         twitter: params["twitter"] }
+  end
   redirect to('/thanks')
-  # @username = params[:username]
-  # @@user = User.new
-  # @@user.append_to_hash(params[:username], params[:email], params[:twitter])
 end
 
 get '/suckers' do
