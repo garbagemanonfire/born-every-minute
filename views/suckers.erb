@@ -11,9 +11,9 @@
             </tr>
             <% session["users"].each do |value| %>
                 <tr>
-                    <td><%= value[:username] %></td>
-                    <td><%= value[:email] %></td>
-                    <td><%= value[:twitter] %></td>
+                    <td onclick="location.href='/details'"><%= value[:username] %></td>
+                    <td td onclick="location.href='/details'"><%= value[:email] %></td>
+                    <td td onclick="location.href='/details'"><%= value[:twitter] %></td>
                 </tr>
             <% end %>
 

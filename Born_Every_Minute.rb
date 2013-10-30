@@ -1,7 +1,7 @@
 # ./Born_Every_Minute.rb
 require 'sinatra'
 require 'pry'
-#require './userrecords.rb'
+# require './userrecords.rb'
 enable :sessions
 
 get '/' do
@@ -13,7 +13,7 @@ get '/thanks' do
 end
 
 post '/' do
-  if session.has_key?(:users)
+  if session.key?(:users)
     session[:users] << { username: params["username"],
                          email: params["email"],
                          twitter: params["twitter"] }
@@ -23,18 +23,20 @@ post '/' do
                          email:  params["email"],
                          twitter: params["twitter"] }
   end
-  binding.pry
   redirect to('/thanks')
 end
 
 get '/suckers' do
   # @test = @@user.get_users
-  binding.pry
   erb :suckers
 end
 
 get '/details' do
   erb :details
+end
+
+get '/details/:string' do
+  erb :details, :locals => { :user_index => params[:string] }
 end
 
 post '/clear' do

@@ -9,9 +9,13 @@
                 <th>Email</th>
                 <th>Twitter</th>
             </tr>
-            <td><%= session[:value][0][:username] %></td>
-            <td><%= session[:value][1][:email] %></td>
-            <td><%= session[:value][2][:twitter] %></td>
+            <tr>
+                <% session["users"].each do |value| %>
+                <td><%= value[:username] %></td>
+                <td><%= value[:email] %></td>
+                <td><%= value[:twitter] %></td>
+            </tr>
+            <% end %>
           </tr>
         </table>
     </div>
