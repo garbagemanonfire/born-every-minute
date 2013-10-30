@@ -20,14 +20,16 @@ post '/' do
   else
     session[:users] = []
     session[:users] << { username: params["username"],
-                         email: params["email"],
+                         email:  params["email"],
                          twitter: params["twitter"] }
   end
+  binding.pry
   redirect to('/thanks')
 end
 
 get '/suckers' do
   # @test = @@user.get_users
+  binding.pry
   erb :suckers
 end
 
