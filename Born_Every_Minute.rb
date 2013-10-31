@@ -13,21 +13,14 @@ get '/thanks' do
 end
 
 post '/' do
-  if session.key?(:users)
-    session[:users] << { username: params["username"],
-                         email: params["email"],
-                         twitter: params["twitter"] }
-  else
-    session[:users] = []
-    session[:users] << { username: params["username"],
-                         email:  params["email"],
-                         twitter: params["twitter"] }
-  end
+  session[:users] = [] unless session[:users]
+  session[:users] << { username: params['username'],
+                       email: params['email'],
+                       twitter: params['twitter'] }
   redirect to('/thanks')
 end
 
 get '/suckers' do
-  # @test = @@user.get_users
   erb :suckers
 end
 
@@ -35,8 +28,8 @@ get '/details' do
   erb :details
 end
 
-get '/details/:string' do
-  erb :details, :locals => { :user_index => params[:string] }
+get '/suckers/:user_id' do
+  erb :details, locals: { 'user_index' => params[:user_id] }
 end
 
 post '/clear' do

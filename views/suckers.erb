@@ -9,9 +9,9 @@
                 <th>Email</th>
                 <th>Twitter</th>
             </tr>
-            <% session["users"].each do |value| %>
+            <% session["users"].each_with_index do |value, index| %>
                 <tr>
-                    <td onclick="location.href='/details'"><%= value[:username] %></td>
+                    <td onclick="location.href='/suckers/<%= index %>'"><%= value[:username] %></td>
                     <td td onclick="location.href='/details'"><%= value[:email] %></td>
                     <td td onclick="location.href='/details'"><%= value[:twitter] %></td>
                 </tr>

@@ -11,4 +11,4 @@
 
 ===Increment 3===
 
-    First step completed: able to push user info into the sessions hash repeatedly. Homepage and Thanks page working now, but suckers and individual suckers pages are broken due to the new code. So fixing those is the next step!
+    Finished with Increment 3! Program is able to push user info into the sessions hash repeatedly. Suckers pages lists all suckers signed up and clicking on one passes through to an individual page with that individual sucker’s information.

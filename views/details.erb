@@ -10,10 +10,12 @@
                 <th>Twitter</th>
             </tr>
             <tr>
-                <% session["users"].each do |value| %>
-                <td><%= value[:username] %></td>
-                <td><%= value[:email] %></td>
-                <td><%= value[:twitter] %></td>
+                <% session["users"].each_with_index do |value, index| %>
+                <% if index == user_index.to_i %>
+                    <td><%= value[:username] %></td>
+                    <td><%= value[:email] %></td>
+                    <td><%= value[:twitter] %></td>
+                <% end %>
             </tr>
             <% end %>
           </tr>
